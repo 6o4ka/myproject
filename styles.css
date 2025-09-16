@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+margin: 
+}
+
+html{
+    width: 320px;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.navigation-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation{
+    margin-left: 16px;
+    margin-right: 16px;
+}
