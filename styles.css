@@ -1,9 +1,29 @@
+@font-face {
+    font-family: "TTLakes-Regular";
+    src: url(fonts/TTLakes-Regular.ttf);
+}
+
+@font-face {
+    font-family: "TTLakes-DemiBold";
+    src: url("fonts/TTLakes-DemiBold.ttf");
+}
+
+@font-face {
+    font-family: "TTLakes-Light";
+    src: url("fonts/TTLakes-Light.ttf");
+}
+
+
+
 * {
-    padding: 0; 
+    font-family: "TTLakes-Regular";
+    padding: 0;
+    margin: 0; 
 }
 
 html{
-    width: 320px;
+    max-width: 320px;
+    height: 597px;
 }
 
 ul, li {
@@ -13,6 +33,8 @@ ul, li {
 .navigation-items {
     display: flex;
     justify-content: space-between;
+    padding: 15px 16px 15px 16px;
+    align-items: center;
 }
 
 .nav-divider {
@@ -20,29 +42,33 @@ ul, li {
     margin-bottom: auto;
 }
 
-.navigation{
-    margin-left: 16px;
-    margin-right: 16px;
-}
-
-
-
-
 
 section {
     width: 320px;
     background-color: rgba(248, 248, 248, 1);
 } 
 
+
 .main-header_item {
+    font-family: "TTLakes-DemiBold";
+    font-weight: 700;
 font-size: 28px;
+margin-bottom: 24px;
+align-items: center;
+padding-top: 24px;;
+}
+
+.main-header_item::before {
+    content:url(images/highlight.png);
+    margin-right: 16px;
+    float: left;
 }
 
 .main-menu {
     display: flex;
     overflow: scroll;
     flex-direction: row;
-    
+    margin-left: 16px;
 }
 
 .menu-item {
@@ -60,23 +86,47 @@ border-radius: 6px;
 
 
 .main-information {
-margin-top: 24px;
-justify-content: center;
 width: 288px;
 height: 90px;
+margin-top: 24px;
+margin-left: 16px;
 }
 
 
 
-.main-information_text {
+.main-information_item {
+color: rgba(27, 28, 33, 1);
 font-size: 14px;
-}
-.button-read_el {
-    text-decoration: none;
-    color: rgba(27, 28, 33, 1)
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0.2px;
+
 }
 
-.main-image {
-    width: 320px;
-    height: 176px;
+     .main-information_button {
+        width: 132px;
+        height: 24px;
+        margin-left: 16px;
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        
+     }
+
+     .main-button {
+font-size: 16px;
+line-height: 24px;
+letter-spacing: -0.2px;
+text-decoration: none;
+color: rgba(27, 28, 33, 1);
+
+     }
+
+.button_image {
+    align-self: start;
+}
+
+
+.main-logo_image {
+    margin-top: 16px;
 }
