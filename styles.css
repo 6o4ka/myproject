@@ -22,8 +22,7 @@
 }
 
 html{
-    max-width: 320px;
-    height: 597px;
+    max-width: 768px;
 }
 
 ul, li {
@@ -38,14 +37,15 @@ ul, li {
 }
 
 .nav-divider {
+    height: 32px;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 
 section {
-    width: 320px;
     background-color: rgba(248, 248, 248, 1);
+    height: 900px;
 } 
 
 
@@ -72,10 +72,11 @@ padding-top: 24px;;
 }
 
 .menu-item {
-    min-width: 240px;
     font-size: 16px;
-    padding: 7px 8px 7px 15px;
+    padding: 7px 9px 7px 16px;
     color: rgba(126, 126, 130, 1);
+    letter-spacing: -0.2px;
+    white-space: nowrap;
 }
 
 .menu-item_selected {
@@ -87,7 +88,6 @@ border-radius: 6px;
 
 .main-information {
 width: 288px;
-height: 90px;
 margin-top: 24px;
 margin-left: 16px;
 }
@@ -107,7 +107,7 @@ letter-spacing: 0.2px;
         width: 132px;
         height: 24px;
         margin-left: 16px;
-        margin-top: 24px;
+        margin-top: 16px;
         display: flex;
         justify-content: space-between;
         
@@ -129,4 +129,116 @@ color: rgba(27, 28, 33, 1);
 
 .main-logo_image {
     margin-top: 16px;
+}
+
+.left-menu {
+ display: flex;
+ justify-content: space-between;
+ width: 190px;
+ margin-left: 24px;
+ align-items: center;
+}
+
+.right-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-right: 24px;
+    align-items: center;
+}
+
+.nav-checkstatus, .nav-repair {
+    height: 40px;
+}
+
+.main-information_section {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media (min-width: 320px) {
+
+.logo-image_hide--mobile{
+
+    display: none;
+}
+    .menu-item_deckstop {
+        display: none;
+    }
+    
+    .menu-item_laptop {
+        display: none;    
+
+    }
+
+    .nav-hide_element--mobile {
+   display: none; 
+    }
+
+
+    .main-information_section {
+    display: block;
+
+
+}
+
+}
+
+@media (min-width: 768px) {
+    .menu-item_laptop{
+        display: flex;
+    }
+
+    .main-information_button {
+        margin-top: 10px;
+    }
+
+    .main-logo_image {
+        width: 360px;
+        height: 208px;
+        border-radius: 2px;
+    }
+
+ .navigation-items{
+    justify-content: space-between
+ }
+
+.nav-hide_element--mobile {
+   display: flex; 
+    }
+      
+    .logo-image_hide--laptop {
+        display: none;
+    }
+
+.logo-image_hide--mobile{
+    display: flex;
+}
+
+
+.main-information_section {
+    display: flex;
+
+}
+
+.main-logo_image {
+    margin-right: 24px;
+}
+
+.text-container {
+    margin-left: 24px;
+}
+
+
+                
+
+.main-menu {
+    margin-left: 24px;
+}
+
+.main-header_item::before {
+    margin-right: 20px;
+}
+
 }
