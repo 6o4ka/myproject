@@ -21,19 +21,17 @@
     margin: 0; 
 }
 
-html{
-    max-width: 768px;
-}
 
 ul, li {
     list-style: none;
 }
 
-.navigation-items {
+.navigation-items_laptop, .navigation-items_mobile, .navigation-items_deckstop {
     display: flex;
     justify-content: space-between;
     padding: 15px 16px 15px 16px;
     align-items: center;
+    
 }
 
 .nav-divider {
@@ -55,7 +53,7 @@ section {
 font-size: 28px;
 margin-bottom: 24px;
 align-items: center;
-padding-top: 24px;;
+padding-top: 24px;
 }
 
 .main-header_item::before {
@@ -157,7 +155,98 @@ color: rgba(27, 28, 33, 1);
 }
 
 
-@media (min-width: 320px) {
+.navigation-items_deckstop {
+    padding: 0;
+}
+
+.navigation-item {
+    font-family: "TTLakes-DemiBold";
+    font-weight: 700;
+font-size: 28px;
+align-items: center;
+}
+
+.navigation-item::before {
+ content:url(images/highlight-deckstop.png);
+    margin-right: 32px;
+    float: left;
+}
+
+.right-menu_deckstop {
+    font-family: "TTLakes-DemiBold";
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: -0.2px;
+margin-right: 23px;
+}
+
+
+
+.repair-element, .checkstatus-element {
+    display: flex;
+    align-self: center;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-top: 42px;
+}
+
+.repair-element {
+margin-right: 32px;
+}
+
+ .right-menu_text {
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-right: 9px;
+ }
+
+
+ .main-reviews {
+    margin-left: 56px;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: -0.2px;
+color: rgba(126, 126, 130, 1);
+ }
+
+ .container-main_deckstop {
+    margin-bottom: 15px;
+ }
+
+
+.container-navigation_item {
+    margin-top: 42px;
+}
+
+
+.text-container_deckstop {
+    margin-top: 16px;
+    margin-left: 34px;
+}
+
+
+.main-information_section--deckstop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-information_item--deckstop {
+    display: flex;
+    min-width: 490px;
+}
+
+
+.main-logo_image--deckstop {
+    margin-right: 28px;
+}
+
+
+@media (min-width: 100px) {
 
 .logo-image_hide--mobile{
 
@@ -179,8 +268,18 @@ color: rgba(27, 28, 33, 1);
 
     .main-information_section {
     display: block;
+}
 
+.navigation-items_laptop {
+    display: none;
+}
 
+.main-deckstop {
+    display: none;
+}
+
+.navigation-items_deckstop {
+    display: none;
 }
 
 }
@@ -240,5 +339,40 @@ color: rgba(27, 28, 33, 1);
 .main-header_item::before {
     margin-right: 20px;
 }
+
+
+.navigation-items_laptop {
+    display: flex;
+}
+
+.navigation-items_mobile {
+    display: none;
+}
+
+}
+
+
+@media (min-width: 1120px) {
+  
+    .navigation-items_laptop {
+        display: none;
+    }
+.container-main_mobile {
+display: none;
+}
+
+body {
+    background-color: rgba(248, 248, 248, 1);
+}
+
+.main-deckstop {
+    display: block;
+}
+
+.navigation-items_deckstop {
+    display: flex;
+}
+
+
 
 }
