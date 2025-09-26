@@ -78,8 +78,10 @@ padding-top: 24px;
 }
 
 .menu-item_selected {
+    
 border: solid 2px rgba(184, 255, 236, 1);
 border-radius: 6px;
+
 }
 
 
@@ -373,6 +375,8 @@ body {
     display: flex;
 }
 
-
+.main-menu {
+    overflow: visible;
+}
 
 }
