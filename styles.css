@@ -51,7 +51,7 @@ section {
     font-family: "TTLakes-DemiBold";
     font-weight: 700;
 font-size: 28px;
-margin-bottom: 24px;
+margin-bottom: 35px;
 align-items: center;
 padding-top: 24px;
 }
@@ -87,7 +87,7 @@ border-radius: 6px;
 
 
 .main-information {
-width: 288px;
+min-width: 288px;
 margin-top: 24px;
 margin-left: 16px;
 }
@@ -159,6 +159,7 @@ color: rgba(27, 28, 33, 1);
 
 .navigation-items_deckstop {
     padding: 0;
+    margin-bottom: 35px;
 }
 
 .navigation-item {
@@ -286,6 +287,22 @@ color: rgba(126, 126, 130, 1);
 
 }
 
+@media (min-width: 532px) {
+    .logo-image_hide--laptop {
+        width: 532px;
+        height: 307px;
+    }
+
+.menu-item:first-child {
+    margin-right: 180px;
+    margin-left: 50px;
+}
+
+}
+
+
+
+
 @media (min-width: 768px) {
     .menu-item_laptop{
         display: flex;
@@ -300,6 +317,7 @@ color: rgba(126, 126, 130, 1);
         height: 208px;
         border-radius: 2px;
     }
+
 
  .navigation-items{
     justify-content: space-between
@@ -350,6 +368,12 @@ color: rgba(126, 126, 130, 1);
 .navigation-items_mobile {
     display: none;
 }
+
+.menu-item:first-child {
+    margin-right: 0;
+    margin-left: 0;
+}
+
 
 }
 
