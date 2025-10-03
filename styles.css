@@ -285,11 +285,16 @@ color: rgba(126, 126, 130, 1);
     display: none;
 }
 
+
+  .logo-image_hide--laptop {
+        width: 100%;
+    }
+
 }
 
 @media (min-width: 532px) {
     .logo-image_hide--laptop {
-        width: 532px;
+        width: 100%;
         height: 307px;
     }
 
@@ -297,6 +302,29 @@ color: rgba(126, 126, 130, 1);
     margin-right: 180px;
     margin-left: 50px;
 }
+
+ .navigation-items_mobile {
+    margin-right: 20px;
+    margin-left: 20px;
+   }
+
+}
+
+
+@media (min-width: 700px) {
+
+      .logo-image_hide--laptop {
+        height: 350px;
+    }
+
+   .navigation-items_mobile {
+    margin-right: 60px;
+    margin-left: 60px;
+   }
+
+.menu-item:first-child {
+    margin-right: 140px;
+    margin-left: 40px;
 
 }
 
