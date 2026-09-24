@@ -451,7 +451,7 @@ body {
 display: flex;
 flex-direction: column;
 font-size: 16px;
-
+position: fixed;
 }
 
 .burger-menu_header {
