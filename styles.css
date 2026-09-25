@@ -452,9 +452,10 @@ display: flex;
 flex-direction: column;
 font-size: 16px;
 z-index: 1000;
-top: -100px;        /* вместо margin-top */
+top: -100px;        
   left: 0;
   background: #FFFFFF;
+  transition: transform 0.45s;
 }
 
 .burger-menu_header {
@@ -499,7 +500,7 @@ align-items: center;
 
 .burger-navigation_item a{
     position: relative;
-  display: inline-block; /* или block, в зависимости от макета */
+  display: inline-block; 
   margin-left: 24px;
 }
 
@@ -556,4 +557,9 @@ align-items: center;
 
 .burger-navigation_item a:hover::before {
   opacity: 1;
+}
+
+
+.hidden{
+transform: translateX(-200%);
 }
