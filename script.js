@@ -10,7 +10,7 @@ var laptopBrands = document.querySelector('.hidden-content');
 var desktopBrands = document.querySelector('.desktop-hidden_content');
 var desktopBrandsOpenButton = document.querySelector('.desktop-brands_button');
 
-console.log(desktopBrandsOpenButton)
+
 
 for (var i = 0; i < burgerOpenButton.length; i++){
     burgerOpenButton[i].addEventListener('click', function(evt){
@@ -58,7 +58,7 @@ desktopBrandsOpenButton.addEventListener('click', function(evt) {
         desktopBrandsOpenButton.classList.add('desktop-brands_button--open');
         desktopBrandsOpenButton.textContent = 'Скрыть';
 
-        console.log(desktopBrandsOpenButton);
+        
     } else {
         desktopBrands.classList.add('hidden-brands');
         desktopBrandsOpenButton.classList.remove('desktop-brands_button--open');

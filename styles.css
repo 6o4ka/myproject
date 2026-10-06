@@ -13,9 +13,7 @@
     src: url("fonts/TTLakes-Light.ttf");
 }
 
-html{
-    height: 2500px;
-}
+
 
 * {
     box-sizing: border-box;
@@ -201,7 +199,6 @@ margin-right: 23px;
     display: flex;
     align-self: center;
     margin-bottom: auto;
-    margin-top: auto;
     margin-top: 42px;
 }
 
@@ -257,7 +254,7 @@ color: rgba(126, 126, 130, 1);
 }
 
 
-@media (min-width: 100px) {
+
 
 .logo-image_hide--mobile{
 
@@ -298,7 +295,7 @@ color: rgba(126, 126, 130, 1);
         width: 100%;
     }
 
-}
+
 
 @media (min-width: 532px) {
     .logo-image_hide--laptop {
@@ -463,9 +460,9 @@ top: -100px;
   box-shadow: 5px 0px 52px #0E185033;
 }
 
-.hidden{
+/* .hidden{
 transform: translateX(-200%);
-}
+} */
 
 .burger-menu_header {
 display: flex;
@@ -705,7 +702,6 @@ align-items: center;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    flex-wrap: wrap;
     margin: 24px;
     margin-bottom: 0;
 }
@@ -715,11 +711,8 @@ align-items: center;
     gap: 24px;
 }
 .brands-content_item {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-
+   border-radius: 6px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -767,7 +760,7 @@ left: -25px;
 top: -2px;
 transform: rotate(0deg);
 transition: transform 0.5s ease;
-margin-bottom: 34px;
+
 }
 
 .brands-button--open::before{
@@ -841,7 +834,7 @@ left: -25px;
 top: -2px;
 transform: rotate(0deg);
 transition: transform 0.5s ease;
-margin-bottom: 34px;
+
 }
 
 .desktop-brands_button--open::before{
