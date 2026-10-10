@@ -13,6 +13,20 @@
     src: url("fonts/TTLakes-Light.ttf");
 }
 
+@font-face{
+    font-family: "TT Lakes-Regular";
+    src: url(fonts/TTLakes-Regular.woff);
+}
+
+@font-face{
+    font-family: "TT Lakes-Medium";
+    src: url(fonts/TTLakes-Medium.woff);
+}
+
+@font-face{
+    font-family: "TT Lakes-Bold";
+    src: url(fonts/TTLakes-Bold.woff);
+}
 
 
 * {
@@ -24,6 +38,11 @@
 
 }
 
+body {
+    overflow-x: hidden;
+    
+}
+
 a {
     list-style: none;
     text-decoration: none;
@@ -31,6 +50,14 @@ a {
 
 ul, li {
     list-style: none;
+}
+
+
+.circle-button{
+width: 40px;
+height: 40px;
+background: #FF3E79;
+border-radius: 50%;
 }
 
 .navigation-items_laptop, .navigation-items_mobile, .navigation-items_deckstop {
@@ -139,8 +166,8 @@ color: rgba(27, 28, 33, 1);
 
 .left-menu {
  display: flex;
+ width: 200px;
  justify-content: space-between;
- width: 190px;
  margin-left: 24px;
  align-items: center;
 }
@@ -162,6 +189,9 @@ color: rgba(27, 28, 33, 1);
     justify-content: space-between;
 }
 
+.navigation-items_laptop{
+    justify-content: space-between; 
+}
 
 .navigation-items_deckstop {
     padding: 0;
@@ -447,7 +477,9 @@ body {
     display: flex;
 flex-direction: column;
 
-    width: 320px;
+    width: 100%;
+    height: 100vh;
+    max-width: 320px;
     
     margin-top: 100px;
 
@@ -460,9 +492,7 @@ top: -100px;
   box-shadow: 5px 0px 52px #0E185033;
 }
 
-/* .hidden{
-transform: translateX(-200%);
-} */
+
 
 .burger-menu_header {
 display: flex;
@@ -584,7 +614,11 @@ align-items: center;
     height: 80px;
     font-style: 16px;
     text-transform: uppercase;
-    background-color: #FFFFFF;
+    background: linear-gradient(to right, #F8F8F8, #FFFFFF);
+}
+
+.swiper_header h3 {
+    color:#7E7E82;
 }
 
 .swiper-wrapper{
@@ -677,12 +711,12 @@ align-items: center;
     margin-top: 50px;
     flex-direction: column;
     justify-self: center;
-    width: 768px;
+   width: 100%;
 
 }
 .brands-header{
     display: flex;
-     background: #FFFFFF;
+     background: linear-gradient(to right, #F8F8F8, #FFFFFF);
      height: 56px;
      width: 100%;
      align-items: center;
@@ -690,8 +724,6 @@ align-items: center;
      
 }
 .brands-header h3{
-    background: #FFFFFF;
-
     text-transform: uppercase;
     line-height: 24px;
     font-size: 16px;
@@ -704,6 +736,8 @@ align-items: center;
     gap: 24px;
     margin: 24px;
     margin-bottom: 0;
+    max-width: 768px;
+    align-self: center;
 }
 .open-content {
     display: flex;
@@ -736,7 +770,9 @@ align-items: center;
     padding: 0 16px
 }
 
-
+.hidden{
+    transform: translateX(-200%);
+}
 
 
 .hidden-brands {
@@ -801,20 +837,22 @@ transition: transform 0.5s ease;
     display: flex;
     flex-direction: column;
 
-    align-items: center;
+    align-self: center;
     justify-self: center;
 
     margin-top: 50px;
-    width: 1120px;
+    width: 100%;
 }
 
 .desktop-brands_content{
     margin: 32px;
+    max-width: 1120px;
+    align-self: center; 
+
 }
 
 .desktop-open_content{
     gap: 32px;
-    width: 1000px;
 }
 
 .desktop-hidden_content{
@@ -824,6 +862,7 @@ transition: transform 0.5s ease;
 
 .desktop-brands_button{
     position: relative;
+    margin-left: 32px;
 }
 
 .desktop-brands_button::before{
@@ -846,10 +885,245 @@ transition: transform 0.5s ease;
     .desktop-brands_section{
         display: none;
     }
+
+    .hidden-main{
+        display: none;
+    }
 }
 
 @media (min-width: 1120px) {
     .desktop-brands_section{
         display: flex;
     }
+
+    .desktop-brands_section{
+        display: flex;
+    }
+    
+
+
+    .desktop-burger_menu{
+        position: relative;
+        height: 100%;
+        display: flex;
+    }
+
+
+
+
+
+    .grid-container{
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    grid-template-areas:
+    "aside header"
+    "aside header"
+    "aside main-content"
+    "aside main-brand-section";
+    max-width: 1120px;
+    }
+
+    .desktop-burger_menu{
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+
+    width: 320px;
+    
+    margin-top: 100px;
+
+    font-size: 16px;
+    z-index: 1000;
+    top: -100px;        
+    left: 0;
+    background: #FFFFFF;
+    transition: transform 0.45s;
+    box-shadow: 5px 0px 52px #0E185033;
+    }
+
+
+    .main-deckstop{
+        grid-area: main-content;
+    }
+
+    .desktop-brands_section{
+        grid-area: main-brand-section;
+    }
+
+    .navigation{
+        grid-area: header;
+    }
+
+    .main-menu{
+        overflow: visible;
+    }
+
+    .burger-menu{
+        display: none;
+    }
+
 }
+
+
+
+
+.feedback{
+    width: 320px;
+    height: 100vh;
+    right: 0;
+    position: fixed;
+    top: 0;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+    background: #FFFFFF;
+    
+    z-index: 1000;
+    box-shadow: -5px 0px 52px #0E185033;
+
+    transition: transform 0.4s ease;
+}
+
+.circle-button{
+min-width: 40px;
+min-height: 40px;
+background: #FF3E79;
+border-radius: 50%;
+border: 0;
+}
+
+.feedback-button{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 24px 16px;
+}
+
+
+
+
+.feedback-header{
+    margin-top: 40px;
+    margin-left: 12px;
+    font-family: "TT Lakes-Bold";
+    position: relative;
+    justify-self: center;
+}
+
+.feedback-header::before{
+content: url(images/highlight.png);
+position: absolute;
+top: -10px;
+left: -12px;
+}
+
+.feedback-form {
+display: flex;
+flex-direction: column;
+gap: 12px;
+
+}
+
+
+
+
+
+.feedback-form_input {
+    padding: 12px 16px;
+    margin: 0 16px;
+    border: solid 1px #EAEAEA;
+    border-radius: 8px;
+    height: 48px;
+}
+
+
+.feedback-form_agreement {
+    margin: 16px;
+    text-align: start;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.feedback-form_agreement a {
+    color: #FF3E79;
+}
+
+.feedback-form_button {
+    background: #FF3E79;
+
+    width: 136px;
+   height: 32px;
+   margin: 16px 32px;
+
+   border: 0;
+   border-radius: 16px;
+   align-self: self-end;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.submit-text{
+    color: #FFFFFF;
+    text-transform: uppercase;
+   margin-right: 5px;
+   font-family: "TT Lakes-Bold";
+   font-size: 12px;
+}
+
+.feedback-form_textarea{
+    height: 118px;
+}
+
+ .hidden-feedback{
+    transform: translateX(150%);
+} 
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 900;
+    transition: opacity 0.3s ease;
+}
+
+  .hidden-overlay {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+} 
+
+
+
+
+@media (min-width: 100px) {
+}
+
+@media (min-width: 1120px) {
+    .feedback{
+        width: 440px;
+        position: fixed;
+        display: flex;
+    }
+
+.feedback-button{
+    position: absolute;
+    left: -92px;
+}
+
+.burger-menu{
+    z-index: 1;
+}
+
+.desktop-burger_menu{
+    z-index: 1;
+}
+
+
+}
+
+

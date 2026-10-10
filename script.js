@@ -10,24 +10,51 @@ var laptopBrands = document.querySelector('.hidden-content');
 var desktopBrands = document.querySelector('.desktop-hidden_content');
 var desktopBrandsOpenButton = document.querySelector('.desktop-brands_button');
 
-
+var feedbackOpenButton = document.querySelectorAll('.chekstatus-button');
+var feedbackCloseButton = document.querySelector('.feedback-button');
+var feedback = document.querySelector('.feedback');
+var overlay = document.querySelector('.overlay');
 
 for (var i = 0; i < burgerOpenButton.length; i++){
     burgerOpenButton[i].addEventListener('click', function(evt){
     evt.preventDefault()
 
     burgerMenu.classList.remove('hidden');
-
+    overlay.classList.remove('hidden-overlay');
     });
 }
-
 
 
 burgerCloseButton.addEventListener('click', function(evt){
     evt.preventDefault();
 
     burgerMenu.classList.add('hidden');
+    overlay.classList.add('hidden-overlay');
 });
+
+
+
+for(var i = 0; i < feedbackOpenButton.length; i++){
+    feedbackOpenButton[i].addEventListener('click', function(evt){
+        evt.preventDefault();
+
+        feedback.classList.remove('hidden-feedback');
+        overlay.classList.remove('hidden-overlay');
+    });
+}
+
+
+feedbackCloseButton.addEventListener('click', function(evt){
+    evt.preventDefault();
+
+    feedback.classList.add('hidden-feedback');
+    overlay.classList.add('hidden-overlay');
+})
+
+
+
+
+
 
 
 

@@ -9,13 +9,60 @@
   href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 </head>
 <body>
+        <div class="overlay hidden-overlay"></div>
+        <div class="grid-container">
+
+                <aside class ='hidden-main desktop-burger_menu'>
+        
+        <haeder class="burger-menu_header">
+          <div class="left-header-burger_menu">
+                <div class="burger-menu_header-item">
+                        <a href="">
+                        <img src="images/Group.png" alt="">
+                        </a>
+                </div>
+          </div>
+          <div class="right-header-burger_menu">
+                <div class="burger-menu_header-item">
+                        <a href="">
+                        <img src="images/search.png" alt="">
+                        </a>
+                </div>
+          </div>
+        </haeder>
+
+<nav class="burger-menu_navigation">
+<ul class="burger-navigation">
+        <li class="burger-navigation_item"><a href="">Ремонт техники</a></li>
+        <li class="burger-navigation_item"><a href="">Услуги и сервисы</a></li>
+        <li class="burger-navigation_item"><a href="">Корпоративным клиентам</a></li>
+        <li class="burger-navigation_item"><a href="">Продавцам техники</a></li>
+        <li class="burger-navigation_item"><a href="">Партнерам</a></li>
+        <li class="burger-navigation_item"><a href="">Производителям</a></li>
+        <li class="burger-navigation_item"><a href="">Наши сервисные центры</a></li>
+        <li class="burger-navigation_item"><a href="">Контакты</a></li>
+</ul>
+</nav>
+
+<footer class="burger-menu_footer">
+<div class="burger-footer_item buttons-footer">
+        <a href=""><img src="images/call.png" alt=""></a>
+        <a href=""><img src="images/chat.png" alt=""></a>
+        <a href=""><img src="images/profile.png" alt=""></a>
+</div>
+<div class="burger-footer_item"><span class="footer-email"><a href="mailto:mail@cps.com">mail@cps.com</a></span></div>
+<div class="burger-footer_item"><span class="footer-number"><a href="tel:+78008908900">8 800 890 8900</a></span></div>
+</footer>
+</aside>
+
+
 <header class="navigation">
         <ul class="navigation-items_mobile">
         <li class="nav-burger"><a href="" class="nav-burger_button"><img src="images/burger.png" alt=""></a></li>
         <li class="nav-icon"><img src="images/Group.png" alt=""></li>
         <li class="nav-divider"><img src="images/divider.png" alt=""></li>
         <li class="nav-repair"><img src="images/repair.png" alt=""></li>
-        <li class="nav-checkstatus"><img src="images/checkstatus.png" alt=""></li>
+        <li class="nav-checkstatus"><a href="" class="chekstatus-button"><img src="images/checkstatus.png" alt=""></a></li>
         </ul>
         <ul class="navigation-items_laptop">
                 <div class="left-menu">
@@ -29,7 +76,7 @@
         <li class="nav-profile nav-hide_element--mobile"><img src="images/profile.png" alt=""></li>
         <li class="nav-divider"><img src="images/divider.png" alt=""></li>
         <li class="nav-repair"><img src="images/repair.png" alt=""></li>
-        <li class="nav-checkstatus"><img src="images/checkstatus.png" alt=""></li>
+        <li class="nav-checkstatus"><a href="" class="chekstatus-button"><img src="images/checkstatus.png" alt=""></a></li>
         </div>
         </ul>
         <ul class="navigation-items_deckstop">
@@ -38,7 +85,7 @@
 </div>
 <div class="right-menu_deckstop">
         <li class="repair-element"><span class="right-menu_text">Оставить заявку</span> <img src="images/repair.png" alt=""></li>
-        <li class="checkstatus-element"> <span  class="right-menu_text">Статус ремонта</span> <img src="images/checkstatus.png" alt=""></li>
+        <li class="checkstatus-element"> <span  class="right-menu_text">Статус ремонта</span> <a href="#" class="chekstatus-button"><img src="images/checkstatus.png" alt=""></a></li>
 </div>
         </ul>
 </header>
@@ -79,7 +126,6 @@
 <div class="container-main_deckstop">
          <div class="main-menu">
                 <li class="menu-item menu-item_selected">Ремонтируемые бренды</li>
-                <li class="menu-item">Ремонтируемые устройства</li>
                 <li class="menu-item">Дополнительные услуги</li>
                 <li class="menu-item">Цены на услуги</li>
                 <li class="menu-item">Адреса сервисных центров</li>
@@ -403,13 +449,73 @@
         <a href="" class="brand-card_button"><img src="images/go.png" alt=""></a>
 </li>
 </ul>
+</div>
 
 <div class="desktop-button_container">
 <a href="#" class="desktop-brands_button">Показать все</a>
  </div>
 
 </section>
+</div>
 
+<aside class="feedback hidden-feedback">
+
+<button class="feedback-button circle-button">
+        <img src="images/close.svg" alt="Закрыть" class="feedback-button_image">
+</button>
+
+<header class="feedback-header">
+        <h3>Обратная связь</h2>
+</header>
+
+
+        <form  class="feedback-form">
+                <label class="feedback-form_label" for="name"></label>
+
+                        <input 
+                        type="text"
+                        class="feedback-form_input"
+                        id="name"
+                        placeholder="Имя">
+
+                <label class="feedback-form_label" for="phone"></label>
+
+                        <input 
+                        type="tel"
+                        class="feedback-form_input"
+                        id="phone"
+                        placeholder="Телефон">
+
+                <label class="feedback-form_label" for="email"></label>
+
+                        <input 
+                        type="email"
+                        class="feedback-form_input"
+                        id="email"
+                        placeholder="Электронная почта">
+
+                <label class="feedback-form_label" for="message"></label>
+
+                          <textarea
+                           type="text-area"
+                           class="feedback-form_input feedback-form_textarea"
+                           id="message"
+                           placeholder="Сообщение"></textarea>
+
+                        <p class="feedback-form_agreement">
+                                Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>
+                        </p>
+
+                        <button class="feedback-form_button" type="submit">
+                        
+                                <span class="submit-text">Отправить</span>
+                                <img src="images/dropdown.svg" alt="Отправить">
+        
+                        </button>
+        </form>
+
+
+</aside>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
